@@ -1,7 +1,15 @@
+
+import HomeHeroSection from "../ui/HomeHeroSection";
+
 function Home() {
   return (
     <>
-      <div>Home</div>
+      
+         
+         <HomeHeroSection />
+         
+
+      
     </>
   );
 }
