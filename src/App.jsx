@@ -12,7 +12,7 @@ import CareerDetail from "./pages/CareerDetail";
 import Blogs from "./pages/Blogs";
 import BlogDetail from "./pages/BlogDetail";
 import Contact from "./pages/Contact";
-import PageNotFound from "./pages/PageNotFound";
+
 import NotFound from "./pages/NotFound";
 
 function App() {
