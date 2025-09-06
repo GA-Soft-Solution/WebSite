@@ -1,14 +1,34 @@
-// import   from "react";
-import AboutSection from "../ui/home_about.jsx";
-import Tech from "../ui/TechnologyStack.jsx"
-function Home() {
+import { useState } from 'react';
+import NewsGrid from '../ui/NewsGrid';
+import ArticleDetail from '../ui/ArticleDetail';
+
+const Home = () => {
+  const [selectedArticleId, setSelectedArticleId] = useState(null);
+
+  // Called when a user clicks on a news item
+  const handleArticleClick = (id) => {
+    setSelectedArticleId(id);
+  };
+
+  // Go back to the news grid
+  const handleBackClick = () => {
+    setSelectedArticleId(null);
+  };
+
   return (
-    <>
-      <div>Home</div>
-      <AboutSection />
-      <Tech/>
-    </>
+    <div>
+      {!selectedArticleId && (
+        <NewsGrid onArticleClick={handleArticleClick} />
+      )}
+
+      {selectedArticleId && (
+        <ArticleDetail
+          articleId={selectedArticleId}
+          onBackClick={handleBackClick}
+        />
+      )}
+    </div>
   );
-}
+};
 
 export default Home;

@@ -32,7 +32,7 @@ const AboutSection = () => {
                 />
 
                 {/* Experience Badge */}
-                <div className="absolute bottom-5 left-5 bg-gradient-to-r from-blue-600 to-blue-800 text-white rounded-xl px-5 py-3 shadow-xl">
+                <div className="absolute bottom-5 left-5 bg-gradient-to-r bg-white text-blue-500 rounded-xl px-5 py-3 shadow-xl">
                   <div className="text-2xl md:text-3xl lg:text-4xl xl:text-4xl 2xl:text-4xl font-bold leading-tight">
                     15-Yrs
                   </div>
