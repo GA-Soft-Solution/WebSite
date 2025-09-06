@@ -9,7 +9,7 @@ function AppLayout() {
       <main className="h-screen">
         <Outlet />
       </main>
-      <footer className="h-56 bg-neutral-500">Footer</footer>
+      {/* <footer className="h-56 bg-neutral-500">Footer</footer> */}
     </div>
   );
 }

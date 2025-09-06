@@ -1,5 +1,16 @@
+import ProductSection from "../ui/ProductSection";
+
+
 function Projects() {
-  return <div>Project Page</div>;
+  return (
+    <>
+       <div>Projects</div>
+      < ProductSection />
+     
+     
+      
+    </>
+  );
 }
 
 export default Projects;

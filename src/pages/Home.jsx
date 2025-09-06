@@ -1,6 +1,7 @@
-import CounterSection from "../ui/CounterSection";
-import PartnersSection from "../ui/PartnersSection";
-import HeroSection from "../ui/HeroSections";
+// import CounterSection from "../ui/CounterSection";
+// import PartnersSection from "../ui/PartnersSection";
+import ProductSection from "../ui/ProductSection";
+// import ProductDetails from "../ui/ProductDetails" 
 
 
 
@@ -8,14 +9,16 @@ function Home() {
   return (
     <>
       
-     {/* <HeroSection img="/images/image1.png" content="About Us" /> */}
+      < ProductSection />
+      {/* < ProductDetails /> */}
+     
       <div>Home</div>
       
       {/* Counter section */}
-      <CounterSection />
+      {/* <CounterSection /> */}
 
       {/* Partners section */}
-      <PartnersSection />
+      {/* <PartnersSection /> */}
     </>
   );
 }
