@@ -4,3 +4,59 @@
 } */
 @tailwind components;
 @tailwind utilities;
+@layer utilities {
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;  /* IE, Edge */
+    scrollbar-width: none;     /* Firefox */
+  }
+}
+/* 🔵 Slick slider arrow color override */
+/* .slick-prev:before,
+.slick-next:before {
+  color: #136ECA !important; 
+  font-size: 20px;           
+} */
+/* Hide slick arrows on mobile (width < 640px) */
+/* @media (max-width: 639px) { */
+  .slick-prev,
+  .slick-next {
+    display: none !important;
+  }
+/* } */
+
+
+/* Allow avatars to overflow outside the slick slide container */
+/* .team-slider .slick-list,
+.team-slider .slick-track {
+  overflow: visible !important;
+  padding-top: 12px;
+  padding-bottom: 12px;
+} */
+ .team-slider .slick-list {
+  padding-top: 4rem; /* Adjust based on your image's negative top offset (e.g., -top-14 = 3.5rem + extra) */
+  overflow-x: hidden !important; /* Ensure horizontal scroll remains hidden */
+  
+}
+
+/* Optional: Customize the slider track to ensure no unwanted scrollbars */
+.team-slider .slick-track {
+  display: flex;
+  align-items: flex-start;
+}
+
+/* Optional: Ensure cards are centered and not clipped */
+.team-slider .slick-slide {
+  display: flex;
+  justify-content: center;
+}
+.slick-track {
+  display: flex !important;
+}
+
+.slick-slide {
+  float: none !important;
+  height: auto !important; /* prevent weird stretching */
+}

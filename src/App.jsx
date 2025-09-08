@@ -4,7 +4,7 @@ import AppLayout from "./ui/AppLayout";
 
 import Home from "./pages/Home";
 import AboutUs from "./pages/AboutUs";
-import Teams from "./pages/Teams";
+import Teams from "./pages/TeamsPage";
 import Projects from "./pages/Projects";
 import ProjectDetail from "./pages/ProjectDetail";
 import Careers from "./pages/Careers";
@@ -12,7 +12,6 @@ import CareerDetail from "./pages/CareerDetail";
 import Blogs from "./pages/Blogs";
 import BlogDetail from "./pages/BlogDetail";
 import Contact from "./pages/Contact";
-
 import NotFound from "./pages/NotFound";
 
 function App() {
@@ -24,6 +23,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="aboutus" element={<AboutUs />} />
           <Route path="teams" element={<Teams />} />
+          <Route path="/teams/:id" element={<Teams />} /> {/* same component */}
           <Route path="projects" element={<Projects />} />
           <Route path="/projects/:id" element={<ProjectDetail />} />
           <Route path="careers" element={<Careers />} />
