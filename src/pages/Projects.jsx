@@ -1,12 +1,13 @@
 import ProductSection from "../ui/ProductSection";
+import Client_Reviews from "../ui/Client_Reviews";
 
 
 function Projects() {
   return (
     <>
        <div>Projects</div>
-      < ProductSection />
-     
+      <ProductSection />
+      <Client_Reviews />
      
       
     </>

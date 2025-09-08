@@ -18,7 +18,7 @@ function Projects() {
       </header>
 
       {/* Products  */}
-      <div className=" mx-auto flex flex-wrap gap-8 xl:gap-9 2xl:gap-20 sm:p-5 justify-center items-center sm:px-6 md:px-8  xl:px-10 2xl:px-18   lg:px-14">
+      <div className=" mx-auto flex flex-wrap gap-8 xl:gap-9 2xl:gap-20 sm:p-5 justify-center 2xl:justify-start  items-center sm:px-6 md:px-8  xl:px-10 2xl:px-18   lg:px-14">
         {products.map(({ id, title, image, icon }) => (
           <article
             key={id}
