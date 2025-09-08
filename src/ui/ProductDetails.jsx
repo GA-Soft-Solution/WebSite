@@ -76,7 +76,7 @@ const ProjectDetail = () => {
                   key={idx}
                   className={`w-2 h-2 lg:w-3 lg:h-3 rounded-full ${
                     currentPage === idx ? "bg-blue-600" : "bg-gray-300"
-                  } shadow-md hover:bg-blue-600 transition`}
+                  } hover:bg-blue-600 transition`}
                   onClick={() => setCurrentPage(idx)}
                 />
               ))}
