@@ -1,5 +1,6 @@
 import ProductSection from "../ui/ProductSection";
 import Client_Reviews from "../ui/Client_Reviews";
+import Reviews from "../ui/Reviews";
 
 
 function Projects() {
@@ -8,7 +9,7 @@ function Projects() {
        <div>Projects</div>
       <ProductSection />
       <Client_Reviews />
-     
+      <Reviews />
       
     </>
   );
