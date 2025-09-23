@@ -81,7 +81,7 @@ const ArticleContent = ({ article, excerptRef, progress }) => {
 
         {/* Additional Content */}
         {article.additionalContent && (
-          <div className="prose prose-lg max-w-none mb-8">{article.additionalContent}</div>
+          <div className="prose prose-lg max-w-none lg:mb-8">{article.additionalContent}</div>
         )}
       </div>
     </article>

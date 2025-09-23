@@ -1,14 +1,14 @@
-import PropTypes from "prop-types";
 import { Sidebar } from "./Sidebar";
 import { useNewsData } from "../hooks/useNewsData";
 import { useRef, useState, useEffect } from "react";
+import { useParams } from "react-router-dom"; // <-- import useParams
 import ArticleContent from "./ArticleContent";
 
-const ArticleDetail = ({ articleId }) => {
+const ArticleDetail = () => {
+  const { id } = useParams(); // <-- get ID from URL
   const { newsItems = [] } = useNewsData();
 
-  // Manage current article ID locally
-  const [currentArticleId, setCurrentArticleId] = useState(articleId);
+  const [currentArticleId, setCurrentArticleId] = useState(id);
   const article = newsItems.find((item) => item.id === currentArticleId);
 
   const excerptRef = useRef(null);
@@ -39,7 +39,7 @@ const ArticleDetail = ({ articleId }) => {
   }
 
   return (
-    <div className="flex flex-col mx-6 lg:flex-row gap-28 mt-4 lg:mx-8">
+    <div className="flex flex-col mx-6 lg:flex-row gap-28 lg:mt-4 lg:mx-8">
       {/* Main Content */}
       <div className="flex-1 lg:pr-0">
         <ArticleContent
@@ -59,10 +59,6 @@ const ArticleDetail = ({ articleId }) => {
       </aside>
     </div>
   );
-};
-
-ArticleDetail.propTypes = {
-  articleId: PropTypes.string.isRequired,
 };
 
 export default ArticleDetail;

@@ -1,0 +1,49 @@
+
+    {
+      "id": "1",
+      "title": "test123", // job title not remove
+      "company": "ClearTech Solutions", // this is not needed here it is been in posted by         remove
+      "location": "Addis Ababa City",//location not remove 
+      "jobType": "Full Time",// this needed but it isnot been in backend   not remove
+      "salaryRange": "8000ETB- 15000 ",//sallary it need currency  and compensation period   not remove 
+      "currency": "ETB",// currency not  remove
+      "compensationperiod":"monthly", //compensation period  not remove 
+      "logo": "/job_img/test123.png",//logo not  remove 
+      "heroImage": "https://images.pexels.com/photos/3184317/pexels-photo-3184317.jpeg?auto=compress&cs=tinysrgb&w=1200&h=400&fit=crop",
+      "datePosted": "May 15, 2025",// is needed but not in backend   not remove  
+      "experience": "2-3 Years", //exprience  not remove 
+      "qualification": "BSc", //qualification   not remove 
+      "gender": "Any", //sex  not remove 
+      "offeredSalary": "8000-15000E", // needed but not in backend   not  remove
+      "applicationDeadline": "2025-06-15", //end date 
+      "description": "We are looking for a motivated individual to join our growing team. The ideal candidate will have strong analytical skills and be able to work independently as well as part of a team.",
+      "requirements": [
+        "Bachelor's degree in relevant field",
+        "2-3 years of relevant experience",
+        "Strong communication skills",
+        "Proficiency in MS Office"
+      ],// we add this to description  so remove 
+      "responsibilities": [
+        "Conduct testing and analysis",
+        "Prepare detailed reports",
+        "Collaborate with team members",
+        "Maintain quality standards"
+      ], // we add this to description    so remove 
+      "applylink":"", //apply link
+      "role": "Software Tester", //role 
+      "industryType": "Technology",// industry type
+      "department": "Engineering – Software & QA", //department
+      "employmentType": "Full Time, Permanent", //employment type
+      "roleCategory": "Software Development", // to description 
+      "education": {
+        "ug": "Any Graduate",
+        "pg": "Any Postgraduate"
+      }, //it is not in backend but we have to use this
+      "keySkills": "Analytical skills, MS Office, Communication, Testing", // skills
+      "companyInfo": {
+        "name": "ClearTech Solutions", //company name
+        "phone": "0911123456", //phone 
+        "email": "hr@cleartech.com", //email
+        "website": "https://www.cleartech.com", //website
+        "address": "Addis Ababa" //company address
+      }

@@ -1,5 +1,11 @@
+import NewsGrid from '../ui/NewsGrid';
+
 function Blogs() {
-  return <div>Blogs Page</div>;
+  return (
+    <div>
+      <NewsGrid />
+    </div>
+  );
 }
 
 export default Blogs;

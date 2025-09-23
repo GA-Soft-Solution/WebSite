@@ -1,30 +1,37 @@
-import { useState } from 'react';
-import NewsGrid from '../ui/NewsGrid';
-import ArticleDetail from '../ui/ArticleDetail';
+import { useState } from "react";
+// import IndustryGrid from "../ui/IndustryGrid";
+import JobList from "../ui/JobList";
+import JobDetail from "../ui/JobDetail";
+import jobData from "../data/jobsData";
 
 const Home = () => {
-  const [selectedArticleId, setSelectedArticleId] = useState(null);
+  const [jobs] = useState(jobData.jobs || []);
+  const [selectedJob, setSelectedJob] = useState(null);
+  const [hasMore, setHasMore] = useState(true);
 
-  // Called when a user clicks on a news item
-  const handleArticleClick = (id) => {
-    setSelectedArticleId(id);
+  const handleViewJob = (jobId) => {
+    const job = jobs.find((j) => j.id === jobId);
+    if (job) setSelectedJob(job);
   };
 
-  // Go back to the news grid
-  const handleBackClick = () => {
-    setSelectedArticleId(null);
+  const handleBack = () => setSelectedJob(null);
+
+  const handleLoadMore = () => {
+    // Example: Load more jobs
+    setHasMore(false);
   };
 
   return (
     <div>
-      {!selectedArticleId && (
-        <NewsGrid onArticleClick={handleArticleClick} />
-      )}
-
-      {selectedArticleId && (
-        <ArticleDetail
-          articleId={selectedArticleId}
-          onBackClick={handleBackClick}
+      {/* <IndustryGrid /> */}
+      {selectedJob ? (
+        <JobDetail job={selectedJob} onBack={handleBack} />
+      ) : (
+        <JobList
+          jobs={jobs}
+          onViewJob={handleViewJob} // ✅ Make sure function is passed here
+          onLoadMore={handleLoadMore}
+          hasMore={hasMore}
         />
       )}
     </div>

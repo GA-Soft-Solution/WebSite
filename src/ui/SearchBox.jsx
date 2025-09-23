@@ -13,7 +13,7 @@ export const SearchBox = ({ searchTerm, setSearchTerm, allPosts, onArticleClick 
   }, [searchTerm, allPosts]);
 
   return (
-    <div className="relative mb-4 bg-white shadow-sm p-4">
+    <div className=" mb-4 bg-white shadow-sm p-4">
       <div className="relative">
         <input
           type="text"
