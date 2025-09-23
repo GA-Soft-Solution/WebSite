@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import jobsData from "../data/jobsData.js"; // use JS module instead of JSON
+import jobsData from "../data/jobsData.js"; 
 
 export const useJobs = () => {
   const [jobs, setJobs] = useState([]);

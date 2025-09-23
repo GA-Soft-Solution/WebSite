@@ -1,11 +1,11 @@
 import { useState } from "react";
-// import IndustryGrid from "../ui/IndustryGrid";
+import IndustryGrid from "../ui/IndustryGrid";
 import JobList from "../ui/JobList";
 import JobDetail from "../ui/JobDetail";
 import jobData from "../data/jobsData";
 
 const Home = () => {
-  const [jobs] = useState(jobData.jobs || []);
+  const [jobs] = useState(jobData || []); // ✅ Fixed
   const [selectedJob, setSelectedJob] = useState(null);
   const [hasMore, setHasMore] = useState(true);
 
@@ -23,13 +23,13 @@ const Home = () => {
 
   return (
     <div>
-      {/* <IndustryGrid /> */}
+      <IndustryGrid />
       {selectedJob ? (
         <JobDetail job={selectedJob} onBack={handleBack} />
       ) : (
         <JobList
           jobs={jobs}
-          onViewJob={handleViewJob} // ✅ Make sure function is passed here
+          onViewJob={handleViewJob}
           onLoadMore={handleLoadMore}
           hasMore={hasMore}
         />

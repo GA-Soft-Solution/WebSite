@@ -1,5 +1,4 @@
-{
-  "jobs": [
+  const jobData = [
     {
       "id": "1",
       "title": "test123",
@@ -229,4 +228,4 @@
       "salary": "20000"
     }
   ]
-}
+; export default jobData;
