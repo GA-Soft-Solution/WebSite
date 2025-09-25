@@ -1,4 +1,7 @@
+import PropTypes from 'prop-types';
 import JobContent from "./JobContent";
+import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import PostedBy from "./PostedBy";
 import InfoItem from "./InfoItem";
 import { useNavigate } from "react-router-dom";
@@ -43,6 +46,17 @@ const JobDetail = ({ job }) => {
       </div>
     </div>
   );
+};
+JobDetail.propTypes = {
+  job: PropTypes.shape({
+    datePosted: PropTypes.string.isRequired,
+    location: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    experience: PropTypes.string.isRequired,
+    qualification: PropTypes.string.isRequired,
+    gender: PropTypes.string.isRequired,
+    offeredSalary: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
 export default JobDetail;
