@@ -1,8 +1,9 @@
+import WhyChooseUs from "../ui/WhyChooseUs_Home"
 function Home() {
   return (
     <>
-      <div>Home
-      
+      <div  className='h-screen  overflow-y-scroll'>
+      <WhyChooseUs/>
       </div>
     </>
     

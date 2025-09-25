@@ -14,27 +14,12 @@
   }
 }
 /* 🔵 Slick slider arrow color override */
-/* .slick-prev:before,
-.slick-next:before {
-  color: #136ECA !important; 
-  font-size: 20px;           
-} */
-/* Hide slick arrows on mobile (width < 640px) */
-/* @media (max-width: 639px) { */
+
   .slick-prev,
   .slick-next {
     display: none !important;
   }
-/* } */
 
-
-/* Allow avatars to overflow outside the slick slide container */
-/* .team-slider .slick-list,
-.team-slider .slick-track {
-  overflow: visible !important;
-  padding-top: 12px;
-  padding-bottom: 12px;
-} */
  .team-slider .slick-list {
   padding-top: 4rem; /* Adjust based on your image's negative top offset (e.g., -top-14 = 3.5rem + extra) */
   overflow-x: hidden !important; /* Ensure horizontal scroll remains hidden */
