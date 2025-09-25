@@ -1,5 +1,14 @@
+import ProductDetails from "../ui/ProductDetails" 
+
+
+
 function ProjectDetail() {
-  return <div>Project Detail</div>;
+  return (
+    <>
+       <div>ProjectDetail</div>
+      < ProductDetails />
+    </>
+  );
 }
 
 export default ProjectDetail;
