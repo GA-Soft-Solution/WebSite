@@ -1,10 +1,8 @@
 import PropTypes from 'prop-types';
-import JobContent from "./JobContent";
-import PropTypes from 'prop-types';
-import PropTypes from 'prop-types';
-import PostedBy from "./PostedBy";
-import InfoItem from "./InfoItem";
-import { useNavigate } from "react-router-dom";
+import JobContent from './JobContent';
+import PostedBy from './PostedBy';
+import InfoItem from './InfoItem';
+import { useNavigate } from 'react-router-dom';
 
 const JobDetail = ({ job }) => {
   const navigate = useNavigate();
@@ -47,6 +45,8 @@ const JobDetail = ({ job }) => {
     </div>
   );
 };
+
+// Define PropTypes for the job prop
 JobDetail.propTypes = {
   job: PropTypes.shape({
     datePosted: PropTypes.string.isRequired,
