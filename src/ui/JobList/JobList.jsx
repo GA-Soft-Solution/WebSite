@@ -1,0 +1,50 @@
+import PropTypes from "prop-types";
+import JobCard from "./JobCard";
+import { useNavigate } from "react-router-dom";
+
+const JobList = ({ jobs, onLoadMore, hasMore }) => {
+  const navigate = useNavigate();
+
+  const handleViewJob = (jobId) => {
+    navigate(`/careers/${jobId}`); // Navigate to CareerDetail page
+  };
+
+  return (
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="mx-4 sm:mx-6 lg:mx-32 xl:mx-56 2xl:mx-64">
+        <div className="space-y-12">
+          {Array.isArray(jobs) && jobs.length > 0 ? (
+            jobs.map((job) => (
+              <JobCard
+                key={job.id}
+                job={job}
+                onViewJob={() => handleViewJob(job.id)}
+              />
+            ))
+          ) : (
+            <p className="text-center text-gray-500">No jobs available.</p>
+          )}
+        </div>
+
+        {hasMore && (
+          <div className="flex justify-center mt-16">
+            <button
+              onClick={onLoadMore}
+              className="bg-[#136ECA] hover:bg-[#D7A022] text-white px-8 font-bold py-3 rounded-md text-md  transition-colors duration-500"
+            >
+              Load More Listing
+            </button>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+};
+
+JobList.propTypes = {
+  jobs: PropTypes.array.isRequired,
+  onLoadMore: PropTypes.func.isRequired,
+  hasMore: PropTypes.bool.isRequired,
+};
+
+export default JobList;
