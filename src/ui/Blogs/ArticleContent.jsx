@@ -2,7 +2,8 @@ import PropTypes from "prop-types";
 import { AiOutlineClockCircle,AiOutlineLine } from "react-icons/ai";
 
 import { FiUser } from "react-icons/fi";
-import right from "/Blog_Image/right.png";
+
+import { BiCheckDouble } from 'react-icons/bi';
 
 const ArticleContent = ({ article, excerptRef, progress }) => {
   return (
@@ -82,11 +83,8 @@ const ArticleContent = ({ article, excerptRef, progress }) => {
               <ul className="grid md:grid-cols-2 grid-cols-1 gap-1">
                 {article.elements.map((element, index) => (
                   <li key={index} className="flex items-center">
-                    <img
-                      src={right}
-                      alt="right"
-                      className="mr-2 mt-1 h-2 flex-shrink-0"
-                    />
+                    
+                    <BiCheckDouble className="mr-2 mt-1 h-6 w-6 text-blue-400 flex-shrink-0"/>
                     <p className="flex-1">{element.title}</p>
                   </li>
                 ))}
